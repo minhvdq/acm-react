@@ -1,15 +1,20 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from './components/Home/HomePage'
+import BoardPage from './components/Board/BoardPage'
+import EventsPage from './components/Events/EventsPage'
+import ProjectsPage from './components/Home/ProjectPage'
+
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home classes={ classes } curUser={ curUser } setCurUser={setCurUser}/>} />
-        <Route path='/review/:id' element={<ReviewPage classes={ classes } curUser={curUser} setCurUser={setCurUser} />} />
-        <Route path='/authen' element={<AuthenPage curUser={curUser} setCurUser={setCurUser} />} />
-        <Route path='/manage' element={<EventManage curUser={curUser} />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/events' element={<EventsPage />} />
+        <Route path='/boards' element={<BoardsPage />} />
+        <Route path='/projects' element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
   )
