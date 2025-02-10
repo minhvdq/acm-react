@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './components/Home/HomePage'
 import BoardPage from './components/Board/BoardPage'
 import EventsPage from './components/Events/EventsPage'
-import ProjectsPage from './components/Home/ProjectPage'
+import ProjectsPage from './components/Projects/ProjectsPage'
 
 function App() {
 
