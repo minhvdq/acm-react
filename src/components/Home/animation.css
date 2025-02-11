@@ -1,0 +1,52 @@
+.ml10 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4em; /* Default size for large screens */
+  text-align: center;
+  white-space: nowrap; /* Prevent breaking */
+  width: 100%;
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+  font-size: inherit; /* Inherits size from .ml10 */
+}
+
+/* Responsive Scaling */
+@media (max-width: 1200px) {
+  .ml10 {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .ml10 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .ml10 {
+    font-size: 2.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .ml10 {
+    font-size: 2em; /* Smaller font for mobile */
+    text-align: center;
+  }
+}
