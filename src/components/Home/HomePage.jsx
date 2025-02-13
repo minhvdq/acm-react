@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import anime from 'animejs/lib/anime.es.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from '../Items/NavBar'
 // import './animation.css';
 
-export default function HomePage() {
-    useEffect(() => {
 
+export default function HomePage() {
+    const showAnimation = () => {
+        document.querySelector('.animation-screen').style.display = 'flex'
         document.body.style.overflow = 'hidden'
-        // Set initial states
         anime.set('#logo-text-wrapper', { opacity: 0 });
         anime.set('.gbacmlogo', { opacity: 0 });
         anime.set('.main-content', { opacity: 0 })
@@ -72,9 +73,27 @@ export default function HomePage() {
                 easing: "easeOutExpo"
             }).add({
                 targets: '.main-content',
+                complete: () => {
+                    document.querySelector('.main-content').style.display = 'block' 
+                },
                 opacity: 1,
                 easing: "easeOutExpo"
             })
+    }
+
+    useEffect(() => {
+        // showAnimation()
+        if(!window.localStorage.getItem("animationShowed") ){
+            showAnimation();
+            setTimeout( () => {
+                window.localStorage.setItem("animationShowed", true)
+            }, 3000)
+            
+        }else{
+            document.querySelector('.animation-screen').style.display = 'none'
+            document.querySelector('.animation-screen').style.opacity = '1'
+        }
+       
     }, [])
 
     return (
@@ -82,14 +101,15 @@ export default function HomePage() {
             {/* Hero Section */}
             <div className="animation-screen" style={{
                 backgroundColor: "black",
-                display: "flex",
+                // display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100vh",
                 width: "100vw",
                 textAlign: "center",
-                position: "relative"
+                position: "relative",
+                display: 'none'
             }}>
                 {/* ACM Text Animation */}
                 <div className="acm-text-container" style={{textAlign: 'left'}}>
@@ -170,7 +190,11 @@ export default function HomePage() {
 
             {/* Main Content Section */}
             <div className='main-content'>
-                <h1>Main Content</h1>
+                <div style={{width: '100vw', height: '100vh', backgroundColor: 'black'}}>
+                    <NavBar />
+                    <h1>Main Content</h1>
+                </div>
+                
             </div>
         </div>
     )
