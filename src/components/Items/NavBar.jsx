@@ -5,17 +5,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Logo = () => (
     <div className="container align-items-center justify-content-center">
-        <div className="row align-items-center justify-content-center" style={{ height: "100vh" }}>
+        <div className="row align-items-center justify-content-center">
             {/* Logo Section */}
             <div className="col-auto" id="logo-wrapper">
-                <img src="/cS-mug2.png" alt="logo" height="100px" width="100px" />
+                <img className='logo-img' src="/cS-mug2.png" alt="logo" height='100px' width='100px' />
             </div>
 
             {/* Gettysburg College Text */}
             <div className="col-auto" id="logo-text-wrapper" style={{ textAlign: "left", paddingLeft: 0}}>
-                <div style={{fontSize: '20px', color: 'grey'}}>
-                    <h1 style={{fontSize: '17px'}}> <span style={{color: "#008cff"}}>GETTYSBURG</span> <span style={{color: "#eb6620"}}>A</span>SSOCIATE FOR</h1>
-                    <h1 style={{fontSize: '17px'}}> <span style={{color: "#eb6620"}}>C</span>OMPUTING <span style={{color: "#eb6620"}} >M</span>ACHINARY</h1>
+                <div style={{ color: 'grey'}}>
+                    <h1 className='logo-txt'> <span style={{color: "#008cff"}}>GETTYSBURG</span> <span style={{color: "#eb6620"}}>A</span>SSOCIATE FOR</h1>
+                    <h1 className='logo-txt'> <span style={{color: "#eb6620"}}>C</span>OMPUTING <span style={{color: "#eb6620"}} >M</span>ACHINARY</h1>
                 </div>
                 
             </div>
@@ -46,7 +46,7 @@ export default function NavBar() {
                     </ul>
                 </div>
             </nav>
-            <nav id="hamburger-nav" className="container">
+            <nav id="hamburger-nav" className="container" style={{position: 'relative'}}>
                 <div className="row">
                     <div className="col logo">
                         <img src='/cS-mug2.png' alt='logo' width='80px' height='80px' />

@@ -38,6 +38,10 @@ a:hover {
   cursor: default;
 }
 
+.logo-txt {
+  font-size: 17px;
+}
+
 /* HAMBURGER MENU */
 #hamburger-nav {
   display: none; /* Initially hidden on desktop */
@@ -50,12 +54,14 @@ a:hover {
 }
 
 .hamburger-icon {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 24px;
   width: 30px;
-  margin-top: 30%;
+  margin-top: 70px;
+  transform: translateY(-50%);;
   margin-left: 75%;
   cursor: pointer;
 }
@@ -109,8 +115,20 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  /* some CSS here */
+  .logo-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-txt {
+    font-size: 12px;
+  }
+}
+
 /* Responsive Design */
-@media screen and (max-width: 900px) {
+@media screen and (max-width:768px) {
   #desktop-nav {
     display: none;
   }
@@ -119,7 +137,7 @@ a:hover {
     display: block;
   }
   .logo {
-    margin-top: 5%;
+    margin-top: 30px;
     margin-left: 5%;
     width: 200px;
   }

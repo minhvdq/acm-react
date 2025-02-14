@@ -6,6 +6,10 @@ import NavBar from '../Items/NavBar'
 
 
 export default function HomePage() {
+
+    /**
+     * Function to run introduction animation
+     */
     const showAnimation = () => {
         document.querySelector('.animation-screen').style.display = 'flex'
         document.body.style.overflow = 'hidden'
@@ -82,11 +86,12 @@ export default function HomePage() {
     }
 
     useEffect(() => {
-        // showAnimation()
-        if(!window.localStorage.getItem("animationShowed") ){
+        
+        // check local storage
+        if(!window.sessionStorage.getItem("animationShowed") ){ // 
             showAnimation();
             setTimeout( () => {
-                window.localStorage.setItem("animationShowed", true)
+                window.sessionStorage.setItem("animationShowed", true)
             }, 3000)
             
         }else{
