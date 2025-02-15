@@ -14,7 +14,7 @@ const Logo = () => (
             {/* Gettysburg College Text */}
             <div className="col-auto" id="logo-text-wrapper" style={{ textAlign: "left", paddingLeft: 0}}>
                 <div style={{ color: 'grey'}}>
-                    <h1 className='logo-txt'> <span style={{color: "#008cff"}}>GETTYSBURG</span> <span style={{color: "#eb6620"}}>A</span>SSOCIATE FOR</h1>
+                    <h1 className='logo-txt'> <span style={{color: "#008cff"}}>GETTYSBURG</span> <span style={{color: "#eb6620"}}>A</span>SSOCIATION FOR</h1>
                     <h1 className='logo-txt'> <span style={{color: "#eb6620"}}>C</span>OMPUTING <span style={{color: "#eb6620"}} >M</span>ACHINARY</h1>
                 </div>
                 
