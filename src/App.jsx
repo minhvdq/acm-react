@@ -9,6 +9,7 @@ import ProjectsPage from './components/Projects/ProjectsPage'
 function App() {
 
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -17,6 +18,7 @@ function App() {
         <Route path='/projects' element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
+    
   )
   
 }
