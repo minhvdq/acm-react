@@ -5,7 +5,7 @@ import NavBar from '../Items/NavBar'
 import { motion } from "framer-motion";
 
 import './style.css';
-// import './animation.css';
+import './animation.css';
 
 
 
@@ -443,14 +443,14 @@ export default function HomePage() {
                     
 
                     {/* Copyright */}
-                    <small>© ACM at Gburg 2025</small>
+                    <small>Copyright © 2024 ACM at Gettysburg. All Rights Reserved.</small>
 
                     {/* Social Media Links */}
                     <div className="d-flex gap-3 mt-3">
-                        <a href="https://www.instagram.com/gburg_acm?igsh=bWNwMDM3ejVtNzZ6" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/gburg_acm/" target="_blank" rel="noopener noreferrer">
                         <img src="src/images/instagram.png" alt="Instagram logo" width="50" height="50" />
                         </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
                         <img src="src/images/linkedin.png" alt="LinkedIn logo" width="50" height="50" />
                         </a>
                         <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
