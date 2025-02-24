@@ -5,7 +5,7 @@ import NavBar from '../Items/NavBar'
 import { motion } from "framer-motion";
 import FooterPage from '../Items/Footer';
 import './style.css';
-import './animation.css';
+// import './animation.css';
 
 
 

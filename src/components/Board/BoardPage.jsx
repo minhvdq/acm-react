@@ -1,156 +1,274 @@
-// import './style.css'; 
-// import styles from './styles.module.css'; 
+import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Modal, Button } from 'react-bootstrap';
+import Card from './Card';
+import members from './members.json'
+import NavBar from '../Items/NavBar';
+import FooterPage from '../Items/Footer';
+import ParticlesComponent from '../Events/particles';
 
-export default function BoardPage () {
-    
-    const testFunction = () => { 
-      var x = document.getElementById('div-1'); 
-      if (x.style.display === "none") {
-        x.style.display = "block"; 
-      } else { 
-        x.style.display = "none"; 
-      }
-    }
+const images = [
+    "/board/FirstMeeting.jpg",
+    "/board/KakaoTalk.jpg",
+    "/board/TowerBuilding.jpeg"
+  ];
+  
+  const Slideshow = () => {
+    const [index, setIndex] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 5000); // Change image every 3 seconds
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+  //   const nextSlide = () => setIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   const prevSlide = () => setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center">
+        <div className="position-relative rounded-3 overflow-hidden shadow-lg slideshow-container">
+          <motion.img
+            key={index}
+            src={images[index]}
+            alt="slideshow"
+            className="img-fluid slideshow-image"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+          />
+          
+          
+        </div>
+        <div className="d-flex mt-3">
+          {images.map((_, i) => (
+            <div
+              key={i}
+              className={`mx-1 rounded-circle dot ${i === index ? "bg-light" : "bg-secondary"}`}
+              onClick={() => setIndex(i)}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+export default function BoardPage() {
+    const [selectedPerson, setSelectedPerson] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+
+    const coreTeam = members.coreTeam
+    const webmasterTeam = members.webmasterTeam
+    const exCoreTeam = members.exCoreTeam
+    console.log('core team ', coreTeam)
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelectedPerson(null);
+        window.scrollTo(0, scrollPosition);
+    };
+
+    const handleCardClick = (person) => {
+        setSelectedPerson(person);
+        setShowModal(true);
+    };
 
     return (
-        
-        <>  
-          <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-          </style>
-          
-          {/* <body> */}
-          {/* <h1> OUR TEAM </h1> */}
-          {/* <div class="grid grid-cols-2 gap-4">
-            <div>01</div>
-            <div>02</div>
-            <div>03</div>
-            <div>04</div>
-          </div> */}
-          <div class='flex justify-center bg-[#1e1e1e] text-[#ffffff]'>
-            <section id="Member display wrapper" class="max-w-[1200px] mx-auto px-4 py-8  ">
-              <div class="flex flex-col gap-[72px]">
-                <div>
-                  <div class="md:mb-[120px] xs:mb-10">
-                    <h2 class="font-semibold md:text-[32px] xs:text-2xl">Leads Team</h2>
-                    <p class="mt-3 md:text-xl xs:text-sm">Striving to connect and mentor our members for their best growth.</p>
-                    <div class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 md:gap-10 xs:gap-5 md:mt-10 xs:mt-5">
-                    <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class=" rounded-lg border-[#2c2c2c] bg-[#2c2c2c] text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="bg-[#2c2c2c] border-[#2c2c2c] memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="text-[#ffffff] card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md bg-card md:h-[238px] xs:h-[202px] w-full object-contain"/>
-                                <div class="flow-root ">
-                                  <p class="float-left font-bold text-[14px] md:text-[20px]">
-                                      Damian Vu 
-                                  </p>
+        <>
+        <ParticlesComponent id="particles" />
+            {/* Hero Section with NavBar and Slideshow */}
+            <div className="d-flex flex-column min-vh-100 text-white">
+                {/* NavBar at the top of the hero section */}
+                <NavBar />
 
-                                  <p class="float-right mt-2 text-[12px] md:text-[15px]">
-                                      Class 2027
-                                  </p>
-                                </div>
-                                {/* <h4 class="text-right">idk</h4> */}
+                {/* Hero Content (centered within the remaining space) */}
+                <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 p-3">
+                    <div className="container text-center">
+                        <div className="row align-items-center">
+                            {/* Left Column: Text Content */}
+                            <div className="col-lg-6 col-md-12 text-lg-start text-center">
+                                <h1 className="display-4 fw-bold">
+                                    OUR <span style={{ color: "#eb6600" }}>TEAM</span>
+                                </h1>
+                                <h2 className="h4 mt-5">Who we are?</h2>
+                                <p className="mt-3 fs-5" style={{ maxWidth: "400px" }}>
+                                    We are Gettysburg ACM—talented developers at Gettysburg College. We strive to make a huge impact through technology.
+                                </p>
                             </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class=" rounded-lg border-[#2c2c2c] bg-[#2c2c2c] text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="bg-[#2c2c2c] border-[#2c2c2c] memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="text-[#ffffff] card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md bg-card md:h-[238px] xs:h-[202px] w-full object-contain"/>
-                                <div class="flow-root ">
-                                  <p class="float-left font-bold text-[14px] md:text-[20px]">
-                                      Damian Vu 
-                                  </p>
 
-                                  <p class="float-right mt-2 text-[12px] md:text-[15px]">
-                                      Class 2027
-                                  </p>
-                                </div>
-                                {/* <h4 class="text-right">idk</h4> */}
+                            {/* Right Column: Slideshow */}
+                            <div className="col-lg-6 col-md-12 mt-4 mt-lg-0 d-flex justify-content-center">
+                                <Slideshow />
                             </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
                         </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
-                      <button class="memberCard card-clickable flex flex-col items-center custom-focus-state" aria-label="open James Spokes&#x27;s details">
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm memberCard card-clickable w-full md:p-3 md:pb-4 xs:p-2 xs:pb-3 h-fit grow opacity-100">
-                          <div class="memberCard card-clickable flex h-full flex-col md:gap-3 xs:gap-2 xs:text-[16px] justify-between md:text-lg">
-                            <div class="card-clickable flex flex-col md:gap-3 xs:gap-2 justify-between">
-                                <img src='public/Images/PNG_transparency_demonstration_1.png' alt="James-Spokes" class="rounded-md md:h-[238px] xs:h-[202px] w-full object-cover"/>
-                                <h3 class="text-left font-bold">Placeholder</h3>
-                            </div>
-                            <p class="w-fit h-[32px] flex items-center px-[12px] py-[4px] rounded-2xl text-[14px]" style={{backgroundColor:'#FFD0D0'}}>Full Team Lead</p>
-                          </div>
-                        </div>
-                      </button>
                     </div>
-                  </div>
-                </div> 
-              </div> 
-            </section>
-          </div> 
-            
-          {/* </body> */}
-          
+                </div>
+            </div>
 
+            {/* Team Members Section */}
+            <div className="d-flex justify-content-center text-white">
+                <section id="Member-display-wrapper" className="container px-4 py-5">
+                    <div className="d-flex flex-column gap-5">
+                        {/* Leads Team Section */}
+                        <div>
+                            <div className="mt-10 mb-5">
+                                <h2 className="font-weight-bold display-4">Core Team</h2>
+                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
+                                <div className="row g-4">
+                                    {coreTeam.map(member => (
+                                        <Card key={member.name} person={member} cl='#C75C5C' onClick={() => {handleCardClick(member)}} />
+                                    ))}
+                                </div>
+                            </div>
+                            <br />
+
+                            {/* Another Team Section (if needed) */}
+                            <div className="mt-5 mb-5">
+                                <h2 className="font-weight-bold display-4">Development Team</h2>
+                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
+                                <div className="row g-4">
+                                    {webmasterTeam.map(member => (
+                                        <Card key={member.name} person={member} cl='#00559B' onClick={() => {handleCardClick(member)}} />
+                                    ))}
+                                </div>
+                            </div>
+                            <br />
+
+                            <div className="mt-5 mb-5">
+                                <h2 className="font-weight-bold display-4">Ex Core Team</h2>
+                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
+                                <div className="row g-4">
+                                    {exCoreTeam.map(member => (
+                                        <Card key={member.name} person={member} cl='#B53E00' onClick={() => {handleCardClick(member)}} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <Modal
+                show={showModal}
+                onHide={handleCloseModal}
+                centered
+                size="lg"
+                className="custom-modal"
+                >
+                <Modal.Header closeButton className="border-0">
+                    <Modal.Title className="w-100 text-center">
+                    {selectedPerson?.name}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-4 mb-3 text-center">
+                        <img
+                            src={selectedPerson?.photo}
+                            alt={selectedPerson?.name}
+                            className="img-fluid rounded shadow"
+                        />
+                        </div>
+                        <div className="col-md-8">
+                        <p className="mb-2">
+                            <strong>Class:</strong> {selectedPerson?.class} {selectedPerson?.year}
+                        </p>
+                        <p className="mb-3">
+                            <strong>Description:</strong> {selectedPerson?.description}
+                        </p>
+                        {selectedPerson?.link && (
+                            <p className="mb-3">
+                            <strong>Link:</strong>{' '}
+                            <a
+                                href={selectedPerson.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-decoration-underline"
+                            >
+                                {selectedPerson.link}
+                            </a>
+                            </p>
+                        )}
+                        <div className="d-flex justify-content-center gap-4 mt-4">
+                            <a
+                            href="https://www.instagram.com/gburg_acm/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <img
+                                src="/instagram.png"
+                                alt="Instagram logo"
+                                width="50"
+                                height="50"
+                                className="img-fluid"
+                            />
+                            </a>
+                            <a
+                            href="https://linkedin.com/company/gettysburg-college-association-for-computing-machinery"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <img
+                                src="/linkedin.png"
+                                alt="LinkedIn logo"
+                                width="50"
+                                height="50"
+                                className="img-fluid"
+                            />
+                            </a>
+                            <a
+                            href="https://www.gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            <img
+                                src="/gmail.png"
+                                alt="Gmail logo"
+                                width="50"
+                                height="50"
+                                className="img-fluid"
+                            />
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </Modal.Body>
+                <Modal.Footer className="border-0 justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseModal} className="px-4">
+                    Close
+                    </Button>
+                </Modal.Footer>
+                </Modal>
+            <div style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                textAlign: 'center', 
+                gap: '10px', // Adds space between text and button,
+                marginTop: '10vh',
+                marginBottom: '15vh'
+            }}>
+                <p style={{ margin: 0, color: 'white', fontSize: '2rem' }}>Ready to be on board?</p>
+                <button style={{ 
+                    backgroundColor: '#EB6620', 
+                    color: 'white', 
+                    border: 'none', 
+                    padding: '10px 20px', 
+                    borderRadius: '5px', 
+                    cursor: 'pointer', 
+                    fontSize: '16px'
+                }}>
+                    APPLY
+                </button>
+            </div>
+            <FooterPage />
         </>
-    )
+    );
 }

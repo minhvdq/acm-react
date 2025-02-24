@@ -9,15 +9,15 @@ export default function FooterPage() {
                     <small>Copyright © 2024 ACM at Gettysburg. All Rights Reserved.</small>
 
                     {/* Social Media Links */}
-                    <div className="d-flex gap-3 mt-3">
+                    <div className="d-flex gap-3 mt-3 mb-3">
                         <a href="https://www.instagram.com/gburg_acm/" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/instagram.png" alt="Instagram logo" width="50" height="50" />
+                        <img src="/instagram.png" alt="Instagram logo" width="50" height="50" />
                         </a>
                         <a href="linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/linkedin.png" alt="LinkedIn logo" width="50" height="50" />
+                        <img src="/linkedin.png" alt="LinkedIn logo" width="50" height="50" />
                         </a>
                         <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/gmail.png" alt="Gmail logo" width="50" height="50" />
+                        <img src="/gmail.png" alt="Gmail logo" width="50" height="50" />
                         </a>
                     </div>
                     </div>

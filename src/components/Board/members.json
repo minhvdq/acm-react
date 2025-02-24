@@ -1,0 +1,123 @@
+{
+    "coreTeam": [
+        {
+            "name": "Yashaswe Amatya",
+            "class": "2026",
+            "description": "Hi! I'm Yashaswe Amatya, a junior majoring in Computer Science and MathEcon. I am the President for ACM this year. Really looking forward to meeting everyone and working with all the officers and students on the campus.",
+            "role": "President",
+            "photo": "/photos/yashaswe.jpg",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Lorenzo Zullo",
+            "class": "2026",
+            "description": "Hi I'm Lorenzo and I am a junior CS and Business major. I am excited to help out the club this year. Really happy to be part of a great group of like minded people who enjoy learning new things.",
+            "role": "Vice President",
+            "photo": "/photos/lorenzo.jpg",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Aldiyar Alen",
+            "class": "2028",
+            "description": "Hi, I'm Aldiyar, a freshman majoring in CS and Math, and I am the treasurer for the ACM club. I am really interested in working closely with the budget and providing funding for our events!",
+            "role": "Treasurer",
+            "photo": "/photos/aldiyar.png",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Ulugbek Khairulla",
+            "class": "2027",
+            "description": "Hey, I’m Ulugbek and I am a sophomore majoring in CS and BOM with a Data Science. I am very glad to be a part of this great team and hope to contribute a lot to the ACM club.",
+            "role": "Outreach Officer",
+            "photo": "/photos/ulugbek.jpg"
+        },
+        {
+            "name": "Damian Vu",
+            "class": "2027",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster Lead",
+            "photo": "/photos/damian.png",
+            "linkedin": "",
+            "github": ""
+        }
+    ],
+    "webmasterTeam": [
+        {
+            "name": "Aryama Sharma",
+            "class": "2027",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster",
+            "photo": "/photos/defaultavatar.avif",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Toai Nguyen",
+            "class": "2028",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster",
+            "photo": "/photos/defaultavatar.avif",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Andy Nguyen",
+            "class": "2028",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster",
+            "photo": "/photos/defaultavatar.avif",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Tejaswi Amatya",
+            "class": "2028",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster",
+            "photo": "/photos/defaultavatar.avif",
+            "linkedin": "",
+            "github": ""
+        }
+    ],
+    "exCoreTeam":[
+        {
+            "name": "Andry Rakotonjanbelo",
+            "class": "2025",
+            "description": "Hi, I'm a junior CS major who enjoys learning and exploring the domain of technology and its positive impact on the world. I am glad to serve as your club co-president this year. I look forward to meeting you all and helping keep the club welcoming and enjoyable for everybody.",
+            "role": "Ex-Presiedent",
+            "photo": "/photos/andry24.jpg",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Kevin Estrada",
+            "class": "2025",
+            "description": "Hey, my name is Kevin Estrada. I am junior majoring in Computer Science and minoring in Economics and Data Science. I look forward to helping ACM this year and contribute as much as possible.",
+            "role": "Ex-Presiedent",
+            "photo": "/photos/kevin.jpeg",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Charlie Boye",
+            "class": "2025",
+            "description": "Hi, my name is Charlie and I am a junior CS major and Data Science minor. I am excited to be the vice president of the ACM. I am looking forward to having fun exploring computer science as a club.",
+            "role": "Ex-Vice President",
+            "photo": "/photos/charlie.jpeg",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Alondra Rosas",
+            "class": "2025",
+            "description": "Heyyyyyy, my name is Alondra Rosas and a senior majoring in computer science. I'm the secretary of ACM. Excited to and work with everyone. Fun fact: I'm a first Gen student so feel free to ask any questions.",
+            "role": "Ex Secretary",
+            "photo": "/photos/alondra24.jpg",
+            "linkedin": "",
+            "github": ""
+        }
+    ]
+}

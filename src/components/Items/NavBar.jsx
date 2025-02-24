@@ -58,7 +58,7 @@ export default function NavBar() {
                             <span></span>
                         </div>
                         <div className={`menu-links ${showHamburger ? 'open' : ''}`}>
-                            <li><a href="#about" onClick={toggleMenu}>About Us</a></li>
+                            <li><a href="/#about" onClick={toggleMenu}>About Us</a></li>
                             <li><a href="/events" onClick={toggleMenu}>Events</a></li>
                             <li><a href="/boards" onClick={toggleMenu}>Our Team</a></li>
                             <li><a href="/projects" onClick={toggleMenu}>Projects</a></li>
