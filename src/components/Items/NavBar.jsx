@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Logo = () => (
-    <div className="container align-items-center justify-content-center">
+    <div onClick={() => {window.location.href = '/'}} className="container align-items-center justify-content-center">
         <div className="row align-items-center justify-content-center">
             {/* Logo Section */}
             <div className="col-auto" id="logo-wrapper">
@@ -39,7 +39,7 @@ export default function NavBar() {
                 </div>
                 <div>
                     <ul className="nav-links">
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="/#about">About Us</a></li>
                         <li><a href="/events">Events</a></li>
                         <li><a href="/boards">Our Team</a></li>
                         <li><a href="/projects">Projects</a></li>

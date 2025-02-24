@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './events.css';
-import events from './resources.json';
+import resources from './resources.json';
 import ParticlesComponent from './particles';
 
-const EventsPage = () => {
+const ResourcePage = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -74,7 +74,7 @@ const EventsPage = () => {
         <div className="events-page-container">
             <div className="main-timeline" ref={timelineRef}>
                 <ParticlesComponent id="particles" />
-                {events.map((event, index) => (
+                {resources.map((event, index) => (
                     <motion.div
                         key={event.id}
                         className="timeline"
@@ -107,18 +107,23 @@ const EventsPage = () => {
                             viewport={{ once: true }}
                         >
                             <h3 className="title" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>{event.title}</h3>
-                            <p className="description" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{event.description}</p>
                         </motion.div>
                     </motion.div>
                 ))}
 
-             <Modal show={showModal} onHide={handleCloseModal} centered>
+                <Modal show={showModal} onHide={handleCloseModal} centered>
                     <Modal.Header>
                         <Modal.Title>{selectedEvent?.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p><strong>Date:</strong> {selectedEvent?.month} {selectedEvent?.year}</p>
                         <p><strong>Description:</strong> {selectedEvent?.description}</p>
+                        {/* {selectedEvent.link ?  
+                            <p><strong>Link:</strong> <a href={selectedEvent.link} target="_blank" rel="noopener noreferrer">{selectedEvent.link}</a></p>
+                         : <p></p>} */}
+                        <p><strong>Link:</strong> <a href={selectedEvent.link} target="_blank">{selectedEvent.link}</a></p>
+
+                         
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
@@ -131,4 +136,4 @@ const EventsPage = () => {
     );
 };
 
-export default EventsPage;
+export default ResourcePage;

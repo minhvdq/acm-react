@@ -5,6 +5,8 @@ import './events.css';
 import eventsData from './events.json';
 import resourcesData from './resources.json';
 import ParticlesComponent from './particles';
+import NavBar from '../Items/NavBar';
+import FooterPage from '../Items/Footer';
 
 const EventsPage = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
@@ -78,7 +80,12 @@ const EventsPage = () => {
 
     const data = isEventsView ? eventsData : resourcesData;
 
+    // Sort data in descending order based on id
+    const sortedData = [...data].sort((a, b) => b.id - a.id);
+
     return (
+        <div>
+        <NavBar />
         <div className="events-page-container">
             <Button className="toggle-button" onClick={toggleView}>
                 {isEventsView ? 'Switch to Resources' : 'Switch to Events'}
@@ -91,7 +98,7 @@ const EventsPage = () => {
             </div>
             <div className="main-timeline" ref={timelineRef}>
                 <ParticlesComponent id="particles" />
-                {data.map((item, index) => (
+                {sortedData.map((item, index) => (
                     <motion.div
                         key={item.id}
                         className="timeline"
@@ -124,18 +131,20 @@ const EventsPage = () => {
                             viewport={{ once: true }}
                         >
                             <h3 className="title" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>{item.title}</h3>
-                            <p className="description" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{item.description}</p>
                         </motion.div>
                     </motion.div>
                 ))}
 
-             <Modal show={showModal} onHide={handleCloseModal} centered>
+                <Modal show={showModal} onHide={handleCloseModal} centered>
                     <Modal.Header>
                         <Modal.Title>{selectedEvent?.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p><strong>Date:</strong> {selectedEvent?.month} {selectedEvent?.year}</p>
                         <p><strong>Description:</strong> {selectedEvent?.description}</p>
+                        {selectedEvent?.link && (
+                            <p><strong>Link:</strong> <a href={selectedEvent.link} target="_blank" rel="noopener noreferrer" className="modal-link">{selectedEvent.link}</a></p>
+                        )}
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
@@ -144,6 +153,8 @@ const EventsPage = () => {
                     </Modal.Footer>
                 </Modal>
             </div>
+        </div>
+        <FooterPage />
         </div>
     );
 };

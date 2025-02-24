@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../Items/NavBar'
 import { motion } from "framer-motion";
-
+import FooterPage from '../Items/Footer';
 import './style.css';
 import './animation.css';
 
@@ -421,7 +421,7 @@ export default function HomePage() {
                         </div>
 
                         {/* Right Side: Text */}
-                        <div className="col-lg-6 p-4 rounded shadow-sm">
+                        <div id="about" className="col-lg-6 p-4 rounded shadow-sm">
                             <h2 className="fw-bold">About Us</h2>
                             <p>
                             The Chapter is organized and will be operated exclusively for educational and scientific purposes
@@ -435,30 +435,8 @@ export default function HomePage() {
                         </div>
                         </div>
                     </div>
-                </section>
-
-                {/* Section 3: Footer (Full Screen) */}
-                <footer className="d-flex align-items-center justify-content-center bg-black text-white pt-4 ">
-                    <div className="container d-flex flex-column align-items-center text-center">
-                    
-
-                    {/* Copyright */}
-                    <small>Copyright © 2024 ACM at Gettysburg. All Rights Reserved.</small>
-
-                    {/* Social Media Links */}
-                    <div className="d-flex gap-3 mt-3">
-                        <a href="https://www.instagram.com/gburg_acm/" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/instagram.png" alt="Instagram logo" width="50" height="50" />
-                        </a>
-                        <a href="linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/linkedin.png" alt="LinkedIn logo" width="50" height="50" />
-                        </a>
-                        <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
-                        <img src="src/images/gmail.png" alt="Gmail logo" width="50" height="50" />
-                        </a>
-                    </div>
-                    </div>
-                </footer>
+                </section> 
+                <FooterPage />
                 </div>
             </div>
         </div>
