@@ -2,15 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './events.css';
-import eventsData from './events.json';
-import resourcesData from './resources.json';
+import events from './resources.json';
 import ParticlesComponent from './particles';
 
 const EventsPage = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [isEventsView, setIsEventsView] = useState(true); // State to toggle between events and resources
     const timelineRef = useRef(null);
 
     useEffect(() => {
@@ -72,28 +70,13 @@ const EventsPage = () => {
         window.scrollTo(0, scrollPosition);
     };
 
-    const toggleView = () => {
-        setIsEventsView(!isEventsView);
-    };
-
-    const data = isEventsView ? eventsData : resourcesData;
-
     return (
         <div className="events-page-container">
-            <Button className="toggle-button" onClick={toggleView}>
-                {isEventsView ? 'Switch to Resources' : 'Switch to Events'}
-            </Button>
-            <div className="header-section">
-                <div className="header-content">
-                    <h1>{isEventsView ? 'Welcome to Events' : 'Welcome to Resources'}</h1>
-                    <p>{isEventsView ? 'Discover the latest events happening at ACM.' : 'Explore valuable resources to help you grow and learn.'}</p>
-                </div>
-            </div>
             <div className="main-timeline" ref={timelineRef}>
                 <ParticlesComponent id="particles" />
-                {data.map((item, index) => (
+                {events.map((event, index) => (
                     <motion.div
-                        key={item.id}
+                        key={event.id}
                         className="timeline"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +84,7 @@ const EventsPage = () => {
                         viewport={{ once: true }}
                     >
                         <div className="icon"></div>
-                        <div className="date-content" onClick={() => handleDateClick(item)}>
+                        <div className="date-content" onClick={() => handleDateClick(event)}>
                             <motion.div
                                 className="date-outer"
                                 style={{ cursor: 'pointer' }}
@@ -110,21 +93,21 @@ const EventsPage = () => {
                                 transition={{ duration: 0.4 }}
                             >
                                 <span className="date" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>
-                                    <span className="month" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{item.month}</span>
-                                    <span className="year" style={{ fontSize: window.innerWidth <= 768 ? '16px' : '20px' }}>{item.year}</span>
+                                    <span className="month" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{event.month}</span>
+                                    <span className="year" style={{ fontSize: window.innerWidth <= 768 ? '16px' : '20px' }}>{event.year}</span>
                                 </span>
                             </motion.div>
                         </div>
                         <motion.div
-                            className="timeline-content" onClick={() => handleDateClick(item)}
+                            className="timeline-content" onClick={() => handleDateClick(event)}
                             style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: 0.4 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="title" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>{item.title}</h3>
-                            <p className="description" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{item.description}</p>
+                            <h3 className="title" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>{event.title}</h3>
+                            <p className="description" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{event.description}</p>
                         </motion.div>
                     </motion.div>
                 ))}
