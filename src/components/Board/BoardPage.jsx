@@ -9,10 +9,12 @@ import NavBar from '../Items/NavBar';
 import FooterPage from '../Items/Footer';
 import ParticlesComponent from '../Events/particles';
 
+const homeUrl = '/~vudimi01/myApp'
+
 const images = [
-    "/board/FirstMeeting.jpg",
-    "/board/KakaoTalk.jpg",
-    "/board/TowerBuilding.jpeg"
+    `${homeUrl}/board/FirstMeeting.jpg`,
+    `${homeUrl}/board/KakaoTalk.jpg`,
+    `${homeUrl}/board/TowerBuilding.jpeg`
   ];
   
   const Slideshow = () => {
@@ -169,7 +171,7 @@ export default function BoardPage() {
                     <div className="row align-items-center">
                         <div className="col-md-4 mb-3 text-center">
                         <img
-                            src={selectedPerson?.photo}
+                            src={`${homeUrl}/${selectedPerson?.photo}`}
                             alt={selectedPerson?.name}
                             className="img-fluid rounded shadow"
                         />
@@ -201,7 +203,7 @@ export default function BoardPage() {
                             rel="noopener noreferrer"
                             >
                             <img
-                                src="/instagram.png"
+                                src={`${homeUrl}/instagram.png`}
                                 alt="Instagram logo"
                                 width="50"
                                 height="50"
@@ -214,7 +216,7 @@ export default function BoardPage() {
                             rel="noopener noreferrer"
                             >
                             <img
-                                src="/linkedin.png"
+                                src={`${homeUrl}/linkedin.png`}
                                 alt="LinkedIn logo"
                                 width="50"
                                 height="50"
@@ -227,7 +229,7 @@ export default function BoardPage() {
                             rel="noopener noreferrer"
                             >
                             <img
-                                src="/gmail.png"
+                                src={`${homeUrl}/gmail.png`}
                                 alt="Gmail logo"
                                 width="50"
                                 height="50"

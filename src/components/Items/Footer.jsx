@@ -1,3 +1,5 @@
+const homeUrl = '/~vudimi01/myApp'
+
 export default function FooterPage() {
     return(
         <div>
@@ -11,13 +13,13 @@ export default function FooterPage() {
                     {/* Social Media Links */}
                     <div className="d-flex gap-3 mt-3 mb-3">
                         <a href="https://www.instagram.com/gburg_acm/" target="_blank" rel="noopener noreferrer">
-                        <img src="/instagram.png" alt="Instagram logo" width="50" height="50" />
+                        <img src={`${homeUrl}/instagram.png`} alt="Instagram logo" width="50" height="50" />
                         </a>
                         <a href="linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
-                        <img src="/linkedin.png" alt="LinkedIn logo" width="50" height="50" />
+                        <img src={`${homeUrl}/linkedin.png`} alt="LinkedIn logo" width="50" height="50" />
                         </a>
                         <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/gmail.png" alt="Gmail logo" width="50" height="50" />
+                        <img src={`${homeUrl}/gmail.png`} alt="Gmail logo" width="50" height="50" />
                         </a>
                     </div>
                     </div>

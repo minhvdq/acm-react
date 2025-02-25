@@ -87,13 +87,13 @@ const EventsPage = () => {
         <div>
         <NavBar />
         <div className="events-page-container">
-            <Button className="toggle-button" onClick={toggleView}>
-                {isEventsView ? 'Switch to Resources' : 'Switch to Events'}
-            </Button>
             <div className="header-section">
                 <div className="header-content">
                     <h1>{isEventsView ? 'Welcome to Events' : 'Welcome to Resources'}</h1>
                     <p>{isEventsView ? 'Discover the latest events happening at ACM.' : 'Explore valuable resources to help you grow and learn.'}</p>
+                    <Button className="toggle-button" onClick={toggleView}>
+                        {isEventsView ? 'Switch to Resources' : 'Switch to Events'}
+                    </Button>
                 </div>
             </div>
             <div className="main-timeline" ref={timelineRef}>

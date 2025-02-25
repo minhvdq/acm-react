@@ -12,10 +12,10 @@ function App() {
     
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/events' element={<EventsPage />} />
-        <Route path='/boards' element={<BoardPage />} />
-        <Route path='/projects' element={<ProjectsPage />} />
+        <Route path='/~vudimi01/myApp/' element={<HomePage />} />
+        <Route path='/~vudimi01/myApp/events' element={<EventsPage />} />
+        <Route path='/~vudimi01/myApp/boards' element={<BoardPage />} />
+        <Route path='/~vudimi01/myApp/projects' element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
     

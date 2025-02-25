@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import FooterPage from '../Items/Footer';
 import './style.css';
 // import './animation.css';
-
+const homeUrl =  '/~vudimi01/myApp'
 
 
 
@@ -15,9 +15,9 @@ export default function HomePage() {
     const canvasRef = useRef(null);
 
     const images = [
-        'src/images/kkt.jpg',
-        'src/images/kk2.jpg',
-        'src/images/kkt3.jpg'
+        `${homeUrl}/home/kkt.jpg`,
+        `${homeUrl}/home/kk2.jpg`,
+        `${homeUrl}/home/kkt3.jpg`
     ]
 
     /**
@@ -321,7 +321,7 @@ export default function HomePage() {
                         <div className="row align-items-center justify-content-center" style={{ height: "100vh" }}>
                             {/* Logo Section */}
                             <div className="col-auto" id="logo-wrapper">
-                                <img src="/cS-mug2.png" alt="logo" height="300px" width="300px" />
+                                <img src={`${homeUrl}/cS-mug2.png`} alt="logo" height="300px" width="300px" />
                             </div>
 
                             {/* Gettysburg College Text */}
@@ -412,7 +412,7 @@ export default function HomePage() {
                         {/* Left Side: Image */}
                         <div className="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
                             <img 
-                            src="src/images/kkt.jpg" 
+                            src={`${homeUrl}/home/kkt.jpg`} 
                             alt="group-photo" 
                             className="img-fluid rounded shadow" 
                             width="85%" 
