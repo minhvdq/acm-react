@@ -16,9 +16,9 @@ export default function HomePage() {
     const canvasRef = useRef(null);
 
     const images = [
+        `${homeUrl}/home/ycp.jpg`,
         `${homeUrl}/home/kkt.jpg`,
         `${homeUrl}/home/icpcd2.jpeg`,
-        `${homeUrl}/home/ycp.jpg`
     ]
 
     /**

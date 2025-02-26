@@ -290,8 +290,8 @@ div {
 
 /* Slideshow */
 .slideshow-container {
-  width: 38vw;
-  height: 42vh;
+  width: 40vw;
+  height: 50vh;
   overflow: hidden;
   border-radius: 12px;
 }
