@@ -17,8 +17,8 @@ export default function HomePage() {
 
     const images = [
         `${homeUrl}/home/kkt.jpg`,
-        `${homeUrl}/home/kk2.jpg`,
-        `${homeUrl}/home/kkt3.jpg`
+        `${homeUrl}/home/icpcd2.jpeg`,
+        `${homeUrl}/home/ycp.jpg`
     ]
 
     /**
@@ -413,7 +413,7 @@ export default function HomePage() {
                         {/* Left Side: Image */}
                         <div className="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
                             <img 
-                            src={`${homeUrl}/home/kkt.jpg`} 
+                            src={`${homeUrl}/home/group_photo.jpg`} 
                             alt="group-photo" 
                             className="img-fluid rounded shadow" 
                             width="85%" 

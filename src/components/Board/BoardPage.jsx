@@ -12,9 +12,9 @@ import ParticlesComponent from '../Events/particles';
 import homeUrl from '../../utils/config';
 
 const images = [
-    `${homeUrl}/board/FirstMeeting.jpg`,
-    `${homeUrl}/board/KakaoTalk.jpg`,
-    `${homeUrl}/board/TowerBuilding.jpeg`
+    `${homeUrl}/board/ycpteam.jpg`,
+    `${homeUrl}/board/mugshirt.jpg`,
+    `${homeUrl}/board/soldering.jpg`
   ];
   
   const Slideshow = () => {
@@ -120,7 +120,6 @@ export default function BoardPage() {
                         <div>
                             <div className="mt-10 mb-5">
                                 <h2 className="font-weight-bold display-4">Core Team</h2>
-                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
                                 <div className="row g-4">
                                     {coreTeam.map(member => (
                                         <Card key={member.name} person={member} cl='#C75C5C' onClick={() => {handleCardClick(member)}} />
@@ -132,7 +131,6 @@ export default function BoardPage() {
                             {/* Another Team Section (if needed) */}
                             <div className="mt-5 mb-5">
                                 <h2 className="font-weight-bold display-4">Development Team</h2>
-                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
                                 <div className="row g-4">
                                     {webmasterTeam.map(member => (
                                         <Card key={member.name} person={member} cl='#00559B' onClick={() => {handleCardClick(member)}} />
@@ -142,8 +140,7 @@ export default function BoardPage() {
                             <br />
 
                             <div className="mt-5 mb-5">
-                                <h2 className="font-weight-bold display-4">Ex Core Team</h2>
-                                <p className="mt-3 lead">Striving to connect and mentor our members for their best growth.</p>
+                                <h2 className="font-weight-bold display-4">Advisory Team</h2>
                                 <div className="row g-4">
                                     {exCoreTeam.map(member => (
                                         <Card key={member.name} person={member} cl='#B53E00' onClick={() => {handleCardClick(member)}} />
@@ -171,7 +168,7 @@ export default function BoardPage() {
                     <div className="row align-items-center">
                         <div className="col-md-4 mb-3 text-center">
                         <img
-                            src={`${homeUrl}/${selectedPerson?.photo}`}
+                            src={`${homeUrl}${selectedPerson?.photo}`}
                             alt={selectedPerson?.name}
                             className="img-fluid rounded shadow"
                         />
@@ -183,35 +180,22 @@ export default function BoardPage() {
                         <p className="mb-3">
                             <strong>Description:</strong> {selectedPerson?.description}
                         </p>
-                        {selectedPerson?.link && (
-                            <p className="mb-3">
-                            <strong>Link:</strong>{' '}
-                            <a
-                                href={selectedPerson.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-decoration-underline"
-                            >
-                                {selectedPerson.link}
-                            </a>
-                            </p>
-                        )}
                         <div className="d-flex justify-content-center gap-4 mt-4">
-                            <a
-                            href="https://www.instagram.com/gburg_acm/"
+                            {selectedPerson?.github ? <a
+                            href={`${selectedPerson.github}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             >
                             <img
-                                src={`${homeUrl}/instagram.png`}
+                                src={`${homeUrl}/github.png`}
                                 alt="Instagram logo"
                                 width="50"
                                 height="50"
                                 className="img-fluid"
                             />
-                            </a>
-                            <a
-                            href="https://linkedin.com/company/gettysburg-college-association-for-computing-machinery"
+                            </a> : <></>}
+                            {selectedPerson?.linkedin ? <a
+                            href={selectedPerson?.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
                             >
@@ -222,9 +206,9 @@ export default function BoardPage() {
                                 height="50"
                                 className="img-fluid"
                             />
-                            </a>
-                            <a
-                            href="https://www.gmail.com"
+                            </a> : <></>}
+                            { selectedPerson?.email ? <a
+                            href={selectedPerson.email}
                             target="_blank"
                             rel="noopener noreferrer"
                             >
@@ -235,7 +219,7 @@ export default function BoardPage() {
                                 height="50"
                                 className="img-fluid"
                             />
-                            </a>
+                            </a> : <></>}
                         </div>
                         </div>
                     </div>
