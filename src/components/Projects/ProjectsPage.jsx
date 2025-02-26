@@ -29,7 +29,20 @@ export default function ProjectsPage () {
                     cursor: 'pointer', 
                     fontSize: '16px'
                 }}>
+                    <a 
+                        href="mailto:gburgacm01@gmail.com" 
+                        target="_blank" 
+                        style={{
+                            textDecoration: 'none', 
+                            color: 'white', 
+                            display: 'block', 
+                            width: '100%', 
+                            height: '100%'
+                        }}
+                    > 
                     CONTACT
+                    </a>
+                   
                 </button>
             </div>
 

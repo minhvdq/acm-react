@@ -394,7 +394,19 @@ export default function HomePage() {
                             Innovate. Code. Connect. 
                         </h3>
                         <button className="btn btn-primary btn-lg mt-3" onClick={() => (window.location.href = "#/Contact")}>
-                            Contact Us!
+                            <a 
+                                href="mailto:gburgacm01@gmail.com" 
+                                target="_blank" 
+                                style={{
+                                    textDecoration: 'none', 
+                                    color: 'white', 
+                                    display: 'block', 
+                                    width: '100%', 
+                                    height: '100%'
+                                }}
+                            >
+                                Contact Us!
+                            </a>
                         </button>
                         </div>
 

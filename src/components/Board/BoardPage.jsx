@@ -251,7 +251,19 @@ export default function BoardPage() {
                     cursor: 'pointer', 
                     fontSize: '16px'
                 }}>
-                    APPLY
+                    <a 
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeWbKtDuQhjYmWE2I6GjMVqm0aQgkCpOjsujopyWAWCuaEiuw/viewform?usp=dialog" 
+                        target="_blank" 
+                        style={{
+                            textDecoration: 'none', 
+                            color: 'white', 
+                            display: 'block', 
+                            width: '100%', 
+                            height: '100%'
+                        }}
+                    >
+                        APPLY
+                    </a>
                 </button>
             </div>
             <FooterPage />
