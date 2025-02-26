@@ -15,10 +15,10 @@ export default function FooterPage() {
                         <a href="https://www.instagram.com/gburg_acm/" target="_blank" rel="noopener noreferrer">
                         <img src={`${homeUrl}/instagram.png`} alt="Instagram logo" width="50" height="50" />
                         </a>
-                        <a href="linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/company/gettysburg-college-association-for-computing-machinery" target="_blank" rel="noopener noreferrer">
                         <img src={`${homeUrl}/linkedin.png`} alt="LinkedIn logo" width="50" height="50" />
                         </a>
-                        <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:gburgacm01@gmail.com" target="_blank" rel="noopener noreferrer">
                         <img src={`${homeUrl}/gmail.png`} alt="Gmail logo" width="50" height="50" />
                         </a>
                     </div>
