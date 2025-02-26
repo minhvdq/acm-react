@@ -5,8 +5,9 @@ import NavBar from '../Items/NavBar'
 import { motion } from "framer-motion";
 import FooterPage from '../Items/Footer';
 import './style.css';
-// import './animation.css';
-const homeUrl =  '/~vudimi01/myApp'
+import homeUrl from '../../utils/config';
+
+console.log('home Url is ', homeUrl)
 
 
 

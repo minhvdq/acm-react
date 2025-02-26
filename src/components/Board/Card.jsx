@@ -1,6 +1,5 @@
 import './style.css'
-const homeUrl = '/~vudimi01/myApp'
-
+import homeUrl from '../../utils/config'
 export default function Card({person, cl, onClick}) {
     return(
         <div className="col-6 col-md-4 col-lg-3">

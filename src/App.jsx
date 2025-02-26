@@ -6,16 +6,18 @@ import BoardPage from './components/Board/BoardPage'
 import EventsPage from './components/Events/EventsPage'
 import ProjectsPage from './components/Projects/ProjectsPage'
 
+import homeUrl from './utils/config';
+
 function App() {
 
   return (
     
     <BrowserRouter>
       <Routes>
-        <Route path='/~vudimi01/myApp/' element={<HomePage />} />
-        <Route path='/~vudimi01/myApp/events' element={<EventsPage />} />
-        <Route path='/~vudimi01/myApp/boards' element={<BoardPage />} />
-        <Route path='/~vudimi01/myApp/projects' element={<ProjectsPage />} />
+        <Route path={`${homeUrl}/`} element={<HomePage />} />
+        <Route path={`${homeUrl}/events`} element={<EventsPage />} />
+        <Route path={`${homeUrl}/boards`} element={<BoardPage />} />
+        <Route path={`${homeUrl}/projects`} element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
     

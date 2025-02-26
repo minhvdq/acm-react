@@ -2,7 +2,7 @@ import "./NavBar.css"
 import {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const homeUrl = '/~vudimi01/myApp'
+import homeUrl from "../../utils/config";
 
 const Logo = () => (
     <div onClick={() => {window.location.href = '/'}} className="container align-items-center justify-content-center">

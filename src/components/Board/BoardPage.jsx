@@ -9,7 +9,7 @@ import NavBar from '../Items/NavBar';
 import FooterPage from '../Items/Footer';
 import ParticlesComponent from '../Events/particles';
 
-const homeUrl = '/~vudimi01/myApp'
+import homeUrl from '../../utils/config';
 
 const images = [
     `${homeUrl}/board/FirstMeeting.jpg`,

@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp -r ./dist/* ../myApp && rm -rf dist",
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build && cp -r ./dist/* ../myApp && rm -rf dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "animejs": "^3.2.2",
     "bootstrap": "^5.3.3",
+    "cross-env": "^7.0.3",
     "framer-motion": "^12.4.7",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.9",
@@ -34,6 +35,5 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.8",
     "vite": "^6.1.0"
-  },
-  "home": "http://cs.gettysburg.edu/~vudmi01/myApp"
+  }
 }

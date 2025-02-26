@@ -1,4 +1,4 @@
-const homeUrl = '/~vudimi01/myApp'
+import homeUrl from "../../utils/config"
 
 export default function FooterPage() {
     return(
