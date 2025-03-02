@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import homeUrl from "../../utils/config";
 
 const Logo = () => (
-    <div onClick={() => {window.location.href = '/'}} className="container align-items-center justify-content-center">
+    <div onClick={() => {window.location.href = `${homeUrl}/`}} className="container align-items-center justify-content-center">
         <div className="row align-items-center justify-content-center">
             {/* Logo Section */}
             <div className="col-auto" id="logo-wrapper">
