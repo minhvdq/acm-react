@@ -41,15 +41,15 @@
             "github": "https://github.com/Ulug2"
         },
         {
-            "name": "Damian Vu",
+            "name": "Nick Pinto",
             "class": "2027",
-            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
-            "role": "Webmaster Lead",
-            "photo": "/photos/damian.png",
-            "email": "vudimi01@gettysburg.edu",
-            "linkedin": "https://www.linkedin.com/in/minh-vu-a0617225a/",
-            "github": "https://github.com/minhvdq"
-        }, 
+            "description": "I’m Nick, a sophomore majoring in CS & Mathematics. I am super excited to help out the club, and work alongside a great group of like-minded people.",
+            "role": "Secretary",
+            "photo": "/photos/nick_pinto.jpg",
+            "email": "scout.pinto@gmail.com",
+            "linkedin":"www.linkedin.com/in/nicholas-pinto-153624277",
+            "github": "https://github.com/sudo-nickPinto"
+        },
         {
             "name": "Abiral Shrestha",
             "class": "2028",
@@ -59,15 +59,25 @@
             "email": "shreab01@gettysburg.edu",
             "linkedin":"https://www.linkedin.com/in/abiral-shrestha-94300927b/",
             "github": "https://github.com/Abiralstha99"
+        },
+        {
+            "name": "Damian Vu",
+            "class": "2027",
+            "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
+            "role": "Webmaster Lead",
+            "photo": "/photos/damian.png",
+            "email": "vudimi01@gettysburg.edu",
+            "linkedin": "https://www.linkedin.com/in/minh-vu-a0617225a/",
+            "github": "https://github.com/minhvdq"
         }
     ],
     "webmasterTeam": [
         {
             "name": "Aryama Sharma",
             "class": "2027",
-            "description": "",
+            "description": "I am a Computer and Mathematics Double major with a potential minor in Data Science. I love learning new things and incorporating it to the best of my abilities. I look forward to growing together as a team.",
             "role": "Webmaster",
-            "photo": "/photos/defaultavatar.avif",
+            "photo": "/photos/aryama.jpeg",
             "email": "Sharar01@gettysburg.edu",
             "linkedin": "https://www.linkedin.com/in/aryama-sharma/",
             "github": "https://github.com/aryamasharma"

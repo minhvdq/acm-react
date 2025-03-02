@@ -7,6 +7,8 @@ import resourcesData from './resources.json';
 import ParticlesComponent from './particles';
 import NavBar from '../Items/NavBar';
 import FooterPage from '../Items/Footer';
+import SlideShow from '../Items/SlideShow';
+import homeUrl from '../../utils/config';
 
 const EventsPage = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
@@ -14,6 +16,12 @@ const EventsPage = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isEventsView, setIsEventsView] = useState(true); // State to toggle between events and resources
     const timelineRef = useRef(null);
+
+    const images = [
+        `${homeUrl}/events/soldering.jpg`,
+        `${homeUrl}/events/panelTalk.jpg`,
+        `${homeUrl}/events/mugShirt.jpg`
+    ]
 
     useEffect(() => {
         const adjustTimelineContent = () => {
@@ -85,13 +93,37 @@ const EventsPage = () => {
 
     return (
         <div>
-        <NavBar />
+        <div className="d-flex flex-column min-vh-100 text-white">
+            {/* NavBar at the top of the hero section */}
+            <NavBar />
+
+            {/* Hero Content (centered within the remaining space) */}
+            <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 p-3">
+                <div className="container text-center">
+                    <div className="row align-items-center">
+                        {/* Right Column: Slideshow */}
+                        <div className="col-lg-6 col-md-12 mt-4 mt-lg-0 d-flex justify-content-center">
+                            <SlideShow images={images} />
+                        </div>
+                        {/* Left Column: Text Content */}
+                        <div className="col-lg-6 col-md-12 text-lg-start text-center">
+                            <h1 className="display-4 fw-bold">
+                                OUR <span style={{ color: "#eb6600" }}>EVENTS</span>
+                            </h1>
+                            <p className="mt-3 fs-5" style={{ maxWidth: "100%" }}>
+                                Our events aim to provide students with hands-on experience in real-world scenarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className="events-page-container">
             <div className="header-section">
                 <div className="header-content">
-                    <h1>{isEventsView ? 'Welcome to Events' : 'Welcome to Resources'}</h1>
+                    <h1>{isEventsView ? 'Explore our Events' : 'Explore our Resources'}</h1>
                     <p>{isEventsView ? 'Discover the latest events happening at ACM.' : 'Explore valuable resources to help you grow and learn.'}</p>
-                    <Button className="toggle-button" onClick={toggleView}>
+                    <Button className="toggle-button mt-5 mb-5" onClick={toggleView}>
                         {isEventsView ? 'Switch to Resources' : 'Switch to Events'}
                     </Button>
                 </div>
