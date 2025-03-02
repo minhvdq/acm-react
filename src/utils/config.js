@@ -1,3 +1,3 @@
-const homeUrl = process.env.NODE_ENV === 'production' ? '/~vudimi01/myApp' : ''
+const homeUrl = process.env.NODE_ENV === 'production' ? '/~acm/site' : ''
 
 export default homeUrl
