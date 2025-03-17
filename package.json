@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
-    "build": "cross-env NODE_ENV=production vite build && cp -r ./dist/* ../site && rm -rf dist",
+    "build": "cross-env NODE_ENV=production vite build && cp -r ./dist/* ../myApp && rm -rf dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
