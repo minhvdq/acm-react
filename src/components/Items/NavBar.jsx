@@ -41,7 +41,7 @@ export default function NavBar() {
                 <div>
                     <ul className="nav-links">
                         <li><a href={`${homeUrl}/#about`} >About Us</a></li>
-                        <li><a href={`${homeUrl}/events`}>Events</a></li>
+                        <li><a href={`${homeUrl}/event`}>Events</a></li>
                         <li><a href={`${homeUrl}/boards`}>Our Team</a></li>
                         <li><a href={`${homeUrl}/projects`} >Projects</a></li>
                     </ul>
@@ -60,7 +60,7 @@ export default function NavBar() {
                         </div>
                         <div className={`menu-links ${showHamburger ? 'open' : ''}`}>
                             <li><a href={`${homeUrl}/#about`} onClick={toggleMenu}>About Us</a></li>
-                            <li><a href={`${homeUrl}/events`} onClick={toggleMenu}>Events</a></li>
+                            <li><a href={`${homeUrl}/event`} onClick={toggleMenu}>Events</a></li>
                             <li><a href={`${homeUrl}/boards`}onClick={toggleMenu}>Our Team</a></li>
                             <li><a href={`${homeUrl}/projects`} onClick={toggleMenu}>Projects</a></li>
                         </div>

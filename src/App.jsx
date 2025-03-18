@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path={`${homeUrl}/`} element={<HomePage />} />
-        <Route path={`${homeUrl}/events`} element={<EventsPage />} />
+        <Route path={`${homeUrl}/event`} element={<EventsPage />} />
         <Route path={`${homeUrl}/boards`} element={<BoardPage />} />
         <Route path={`${homeUrl}/projects`} element={<ProjectsPage />} />
       </Routes>
