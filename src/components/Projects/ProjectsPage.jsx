@@ -30,7 +30,7 @@ export default function ProjectsPage () {
                     fontSize: '16px'
                 }}>
                     <a 
-                        href="mailto:gburgacm01@gmail.com" 
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfLPpcILfwc71X9QU6K4PaJc0ov6LTxDdjQjzBYORMkyrykkQ/viewform?usp=header" 
                         target="_blank" 
                         style={{
                             textDecoration: 'none', 

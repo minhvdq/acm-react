@@ -101,18 +101,18 @@ const EventsPage = () => {
             <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1 p-3">
                 <div className="container text-center">
                     <div className="row align-items-center">
-                        {/* Right Column: Slideshow */}
-                        <div className="col-lg-6 col-md-12 mt-4 mt-lg-0 d-flex justify-content-center">
-                            <SlideShow images={images} />
-                        </div>
                         {/* Left Column: Text Content */}
                         <div className="col-lg-6 col-md-12 text-lg-start text-center">
                             <h1 className="display-4 fw-bold">
                                 OUR <span style={{ color: "#eb6600" }}>EVENTS</span>
                             </h1>
-                            <p className="mt-3 fs-5" style={{ maxWidth: "100%" }}>
+                            <p className="mt-3 fs-5" style={{ maxWidth: "400px" }}>
                                 Our events aim to provide students with hands-on experience in real-world scenarios.
                             </p>
+                        </div>
+                        {/* Right Column: Slideshow */}
+                        <div className="col-lg-6 col-md-12 mt-4 mt-lg-0 d-flex justify-content-center">
+                            <SlideShow images={images} />
                         </div>
                     </div>
                 </div>
