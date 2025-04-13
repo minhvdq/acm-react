@@ -196,10 +196,18 @@ button.toggle-button:hover {
     top: 27%;
     left: 0;
   }
+
+
+.main-timeline .day {
+    font-size: 20px;
+    font-weight: 700;
+    color: #232323;
+}
   
   .main-timeline .month {
     font-size: 18px;
     font-weight: 700;
+    color: #232323;
   }
   
   .main-timeline .year {
@@ -362,4 +370,29 @@ button.toggle-button:hover {
 
 .modal-link:hover {
   text-decoration: none;
+}
+
+.event-poster {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-poster img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-link{
+  color: #f5cba7;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  transition: color 0.3s ease, transform 0.3s ease;
+  align-items: center;
+  justify-content: center;
 }

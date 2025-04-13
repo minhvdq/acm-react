@@ -9,6 +9,7 @@ import NavBar from '../Items/NavBar';
 import FooterPage from '../Items/Footer';
 import SlideShow from '../Items/SlideShow';
 import homeUrl from '../../utils/config';
+import { Link } from 'react-router-dom';
 
 const EventsPage = () => {
     const [selectedEvent, setSelectedEvent] = useState(null);
@@ -150,6 +151,7 @@ const EventsPage = () => {
                             >
                                 <span className="date" style={{ fontSize: window.innerWidth <= 768 ? '14px' : '18px' }}>
                                     <span className="month" style={{ fontSize: window.innerWidth <= 768 ? '12px' : '16px' }}>{item.month}</span>
+                                    <span className="day" style={{ fontSize: window.innerWidth <= 768 ? '16px' : '20px' }}> {item.day}</span>
                                     <span className="year" style={{ fontSize: window.innerWidth <= 768 ? '16px' : '20px' }}>{item.year}</span>
                                 </span>
                             </motion.div>
@@ -172,11 +174,26 @@ const EventsPage = () => {
                         <Modal.Title>{selectedEvent?.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p><strong>Date:</strong> {selectedEvent?.month} {selectedEvent?.year}</p>
+                        <p><strong>Date:</strong> {selectedEvent?.month} {selectedEvent?.day} {selectedEvent?.year}</p>
                         <p><strong>Description:</strong> {selectedEvent?.description}</p>
                         {selectedEvent?.link && (
                             <p><strong>Link:</strong> <a href={selectedEvent.link} target="_blank" rel="noopener noreferrer" className="modal-link">{selectedEvent.link}</a></p>
                         )}
+                        {selectedEvent?.month && selectedEvent?.day && selectedEvent?.year && (
+                            <div className="event-poster">
+                                <img
+                                    src={`/events/posters/${selectedEvent?.month}${selectedEvent?.day}${selectedEvent?.year}.jpg`}
+                                    alt={`${selectedEvent.month} ${selectedEvent.day}, ${selectedEvent.year} Poster`}
+                                    className="img-fluid"
+                                />
+                            </div>
+                        )}
+                        {selectedEvent?.gallery && selectedEvent?.month && selectedEvent?.day && selectedEvent?.year && (
+                            <Link to={`/events/gallery/${selectedEvent?.month}${selectedEvent?.day}${selectedEvent?.year}`} className="gallery-link">
+                            View Gallery
+                            </Link>
+                        )}
+
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
