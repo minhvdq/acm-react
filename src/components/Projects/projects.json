@@ -1,0 +1,17 @@
+[
+    {
+        "projectName": "NuBrief",
+        "description": "We built a web app that sends personalized, summarized news emails. Users choose topics and frequency, data is stored in MongoDB, articles come from NewsAPI, summaries via Gemini, and emails are sent with SendGrid. Built with Next.js and Node.js.",
+        "collaborators": [
+            "Gabriel Gozo",
+            "Nishant Neupane"
+        ],
+        "link": "www.nubrief.co",
+        "github": "github.com/nishantneupane/Nubrief",
+        "devpost": "devpost.com/software/nubrief",
+        "demos": [
+            "/projects/nubrief/NuBrief1.png",
+            "/projects/nubrief/nubrief2.png"
+        ]
+    }
+]
