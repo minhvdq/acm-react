@@ -3,48 +3,46 @@ import { Github, Globe, Award } from 'lucide-react';
 
 export default function Projectcard({ project, index }) {
     const projectDemos = () => (
-        <div>
+        <div className="project-demo-container">
             <SlideShow images={project.demos} />
         </div>
     );
 
     const projectInfo = () => (
-        <div className="text-start">
-            <h1>{project.projectName}</h1>
-            <p>{project.description}</p>
+        <div className="project-info text-start text-white d-flex flex-column justify-content-center h-100">
+            <h1 className="project-title" style={{color: "#EB6620"}}>{project.projectName}</h1>
+            <p className="project-description mb-2">{project.description}</p>
 
-            <h3>Collaborators:</h3>
-            <div className="d-flex flex-wrap gap-2">
+            <h3 className="collaborators-title mt-2 mb-1">Collaborators:</h3>
+            <div className="d-flex flex-wrap gap-2 mb-2">
                 {project.collaborators.map((collaborator, i) => (
                     <div
                         key={i}
-                        className="rounded-full px-2 py-1 bg-gray-200"
+                        className="collaborator-tag rounded-pill px-3 py-1"
                     >
                         {collaborator}
                     </div>
                 ))}
             </div>
 
-            <div className="d-flex flex-wrap gap-2 mt-3">
+            <div className="project-links d-flex flex-wrap gap-3 mt-2">
                 {project.github && (
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="d-flex align-items-center gap-1 bg-black text-white px-3 py-1 rounded hover:bg-dark"
-                        style={{ borderColor: '#EB6620', borderWidth: '1px', color: '#EB6620' }}
+                        className="project-link d-flex align-items-center gap-2 px-3 py-1 rounded"
                     >
                         <Github size={16} />
                         <span>GitHub</span>
                     </a>
                 )}
-                {project.live && (
+                {project.link && (
                     <a
-                        href={project.live}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="d-flex align-items-center gap-1 bg-black text-white px-3 py-1 rounded hover:bg-dark"
-                        style={{ borderColor: '#EB6620', borderWidth: '1px', color: '#EB6620' }}
+                        className="project-link d-flex align-items-center gap-2 px-3 py-1 rounded"
                     >
                         <Globe size={16} />
                         <span>Live Demo</span>
@@ -55,8 +53,7 @@ export default function Projectcard({ project, index }) {
                         href={project.devpost}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="d-flex align-items-center gap-1 bg-black text-white px-3 py-1 rounded hover:bg-dark"
-                        style={{ borderColor: '#EB6620', borderWidth: '1px', color: '#EB6620' }}
+                        className="project-link d-flex align-items-center gap-2 px-3 py-1 rounded"
                     >
                         <Award size={16} />
                         <span>DevPost</span>
@@ -67,18 +64,18 @@ export default function Projectcard({ project, index }) {
     );
 
     return (
-        <div className="d-flex flex-column align-items-start justify-content-start flex-grow-1 p-3">
-            <div className="container">
-                <div className="row align-items-start">
+        <div className="project-card" style={{marginBottom: "50vh"}}>
+            <div className="container" >
+                <div className="row g-4 align-items-center">
                     {index % 2 === 1 ? (
                         <>
-                            <div className="col-lg-6 col-md-12">{projectDemos()}</div>
-                            <div className="col-lg-6 col-md-12 mt-4 mt-lg-0">{projectInfo()}</div>
+                            <div className="col-lg-6 col-md-12 mb-3 mb-lg-0">{projectDemos()}</div>
+                            <div className="col-lg-6 col-md-12">{projectInfo()}</div>
                         </>
                     ) : (
                         <>
-                            <div className="col-lg-6 col-md-12">{projectInfo()}</div>
-                            <div className="col-lg-6 col-md-12 mt-4 mt-lg-0">{projectDemos()}</div>
+                            <div className="col-lg-6 col-md-12 mb-3 mb-lg-0">{projectInfo()}</div>
+                            <div className="col-lg-6 col-md-12">{projectDemos()}</div>
                         </>
                     )}
                 </div>

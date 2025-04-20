@@ -316,7 +316,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Content Section */}
-            <div className='main-content'>
+            <div className='main-content' style={{opacity: 0}}>
             <div className="position-relative min-vh-100">
                 {/* Background Canvas (Remains Fixed) */}
                 <canvas

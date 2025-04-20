@@ -7,7 +7,7 @@ export default function SlideShow({ images }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 8000); // Increased from 5000ms to 8000ms (8 seconds)
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -31,7 +31,6 @@ export default function SlideShow({ images }) {
           />
         </AnimatePresence>
         
-        {/* Circular navigation buttons */}
         <button 
           className="nav-circle prev-circle" 
           onClick={prevSlide}
@@ -50,7 +49,7 @@ export default function SlideShow({ images }) {
       
       <div className="slideshow-dots">
         {images.map((_, i) => (
-         <div
+           <div
             key={i}
             className={`mx-1 rounded-circle dot ${i === index ? "bg-light" : "bg-secondary"}`}
             onClick={() => setIndex(i)}

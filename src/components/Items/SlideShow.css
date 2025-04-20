@@ -1,81 +1,87 @@
+/* Outer wrapper for layout control */
 .slideshow-wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
 }
 
+/* Main slideshow container */
 .slideshow-container {
-  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  position: relative;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
+/* Slide image */
 .slideshow-image {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navigation circles - refined */
+/* Nav circles */
 .nav-circle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 40px;
-  max-height: 40px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border: none;
-  outline: none;
   font-size: 24px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s ease;
   padding: 0;
+  border: none;
   box-sizing: border-box;
-  line-height: 1;
-  overflow: hidden;
+  outline: none;
 }
 
-
 .nav-circle:hover {
-  background-color: rgba(235, 102, 32, 0.8); /* #EB6620 with opacity */
+  background-color: rgba(235, 102, 32, 0.8);
 }
 
 .prev-circle {
-  left: 15px;
+  left: 10px;
 }
 
 .next-circle {
-  right: 15px;
+  right: 10px;
 }
 
+/* Dots */
 .slideshow-dots {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+  padding: 0;
+  width: 100%;
 }
 
 .slideshow-dot {
   width: 12px;
   height: 12px;
-  min-width: 12px;
-  min-height: 12px;
-  max-width: 12px;
-  max-height: 12px;
   border-radius: 50%;
   background-color: #666;
   margin: 0 4px;
@@ -83,24 +89,42 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-sizing: border-box;
-  display: inline-block;
+  flex-shrink: 0;
 }
-
 
 .slideshow-dot.active {
   background-color: #EB6620;
   transform: scale(1.3);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .slideshow-container {
     aspect-ratio: 4 / 3;
   }
-  
+
   .nav-circle {
     width: 32px;
     height: 32px;
     font-size: 20px;
+  }
+
+  .slideshow-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+}
+
+/* Additional mobile optimization */
+@media (max-width: 480px) {
+  .slideshow-container {
+    border-radius: 8px;
+  }
+
+  .nav-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
   }
 }

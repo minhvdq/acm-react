@@ -7,15 +7,38 @@ import ProjectCard from "./ProjectCard"
 export default function ProjectsPage () {
     let index = 0
     return (
-        
         <>
             <ParticlesComponent id="particles" />
-            <div style={{height: '84.8vh'}}>
-                <NavBar />
+            <div>
+                <div className="flex flex-col" style={{height: "100vh"}}>
+                    <NavBar />
+                    <div style={{ 
+                        display: 'flex', 
+                        flexDirection: 'column', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        textAlign: 'center', 
+                        gap: '10px', // Adds space between text and button,
+                        marginTop: '10vh',
+                        marginBottom: '15vh'
+                    }}>
+                        <div>
+                        <h1 className="text-4xl font-bold mb-4" style={{ color: '#EB6620', fontWeight: "bold" }}>
+                            OUR PROJECTS
+                        </h1>
+                        <p className="text-white max-w-xl" >
+                            A showcase of innovative projects created by students at Gettysburg College, highlighting their creativity, skills, and impact.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
                 {projects.map(project => {
                     index ++
                     return(
-                        <ProjectCard project={project} index={index} />
+                        <div style={{marginBottom: "20vh"}}>
+                            <ProjectCard project={project} index={index} />
+                        </div>
                     )
                 })}
                 <div style={{ 
@@ -26,9 +49,9 @@ export default function ProjectsPage () {
                     textAlign: 'center', 
                     gap: '10px', // Adds space between text and button,
                     marginTop: '10vh',
-                    marginBottom: '15vh'
+                    marginBottom: '30vh'
                 }}>
-                    <p style={{ margin: 0, color: 'white', fontSize: '2rem' }}>We are working on this page. Contact us if you want to be our partner.</p>
+                    <p style={{ margin: 0, color: 'white', fontSize: '2rem' }}>Want to showcase your project?</p>
                     <button style={{ 
                         backgroundColor: '#EB6620', 
                         color: 'white', 
@@ -54,9 +77,8 @@ export default function ProjectsPage () {
                     
                     </button>
                 </div>
-
+                <FooterPage  />
             </div>
-            <FooterPage  />
         </>
     )
 }
