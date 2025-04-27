@@ -4,7 +4,7 @@ import './gallery.css';  // Make sure to import the correct CSS file
 import ParticlesComponent from './particles';
 import NavBar from '../Items/NavBar';
 import FooterPage from '../Items/Footer';
-import SlideShow from '../Items/SlideShow';
+import Slider from '../Items/Slider';  // Import the Slider component
 import homeUrl from '../../utils/config';
 import { Link } from 'react-router-dom';
 
@@ -64,7 +64,7 @@ const GalleryPage = () => {
                     {/* Slideshow Section */}
                     <div className="gallery-slideshow-container">
                         {galleryExists ? (
-                            <SlideShow images={images} />
+                            <Slider images={images} />
                             ) : (
                                 <p className="no-images-message">No images available for this event.</p>
                             )}
