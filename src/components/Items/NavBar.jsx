@@ -43,7 +43,7 @@ export default function NavBar() {
                         <li><a href={`${homeUrl}/#about`} >About Us</a></li>
                         <li><a href={`${homeUrl}/event`}>Events</a></li>
                         <li><a href={`${homeUrl}/boards`}>Our Team</a></li>
-                        <li><a href={`${homeUrl}/projects`} >Projects</a></li>
+                        <li><a href={`${homeUrl}/project`} >Projects</a></li>
                     </ul>
                 </div>
             </nav>
@@ -62,7 +62,7 @@ export default function NavBar() {
                             <li><a href={`${homeUrl}/#about`} onClick={toggleMenu}>About Us</a></li>
                             <li><a href={`${homeUrl}/event`} onClick={toggleMenu}>Events</a></li>
                             <li><a href={`${homeUrl}/boards`}onClick={toggleMenu}>Our Team</a></li>
-                            <li><a href={`${homeUrl}/projects`} onClick={toggleMenu}>Projects</a></li>
+                            <li><a href={`${homeUrl}/project`} onClick={toggleMenu}>Projects</a></li>
                         </div>
                     </div>
                 </div> 

@@ -17,7 +17,7 @@ function App() {
         <Route path={`${homeUrl}/`} element={<HomePage />} />
         <Route path={`${homeUrl}/event`} element={<EventsPage />} />
         <Route path={`${homeUrl}/boards`} element={<BoardPage />} />
-        <Route path={`${homeUrl}/projects`} element={<ProjectsPage />} />
+        <Route path={`${homeUrl}/project`} element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
     
