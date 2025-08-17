@@ -1,5 +1,18 @@
 [
     {
+        "projectName": "Rate My Classes Gettysburg College",
+        "description": "We built a web app that sends personalized, summarized news emails. Users choose topics and frequency, data is stored in MongoDB, articles come from NewsAPI, summaries via Gemini, and emails are sent with SendGrid. Built with Next.js and Node.js.",
+        "collaborators": [
+            "Damian Vu"
+        ],
+        "link": "https://ratemyclassesgb.study/",
+        "github": "https://github.com/minhvdq/rate_my_classes_gb",
+        "demos": [
+            "/projects/rmcgb/rmc1.png",
+            "/projects/rmcgb/rmc2.png"
+        ]
+    },
+    {
         "projectName": "NuBrief",
         "description": "We built a web app that sends personalized, summarized news emails. Users choose topics and frequency, data is stored in MongoDB, articles come from NewsAPI, summaries via Gemini, and emails are sent with SendGrid. Built with Next.js and Node.js.",
         "collaborators": [
@@ -14,4 +27,5 @@
             "/projects/nubrief/nubrief2.png"
         ]
     }
+    
 ]

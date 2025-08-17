@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard"
 export default function ProjectsPage () {
     let index = 0
     return (
-        <>
+        <div style={{backgroundColor: "#111"}}>
             <ParticlesComponent id="particles" />
             <div>
                 <div className="flex flex-col" style={{height: "100vh"}}>
@@ -79,6 +79,6 @@ export default function ProjectsPage () {
                 </div>
                 <FooterPage  />
             </div>
-        </>
+        </div>
     )
 }

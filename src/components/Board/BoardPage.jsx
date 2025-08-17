@@ -39,7 +39,7 @@ export default function BoardPage() {
     };
 
     return (
-        <>
+        <div style={{backgroundColor: "#111"}}>
         <ParticlesComponent id="particles" />
             {/* Hero Section with NavBar and Slideshow */}
             <div className="d-flex flex-column min-vh-100 text-white">
@@ -225,6 +225,6 @@ export default function BoardPage() {
                 </button>
             </div>
             <FooterPage />
-        </>
+        </div>
     );
 }
