@@ -128,6 +128,16 @@ END:VCALENDAR`;
             </div>
           </div>
 
+          <div className="text-center my-4">
+            <Button 
+              variant="primary" 
+              size="lg" 
+              onClick={() => window.location.href = "/eventHub"}
+            >
+              Event Hub
+            </Button>
+          </div>
+
           <div className="main-timeline">
             <ParticlesComponent id="particles" />
             {sortedEvents.map((event, index) => (
