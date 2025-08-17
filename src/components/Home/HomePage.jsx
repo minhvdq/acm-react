@@ -217,6 +217,7 @@ export default function HomePage() {
         }else{
             document.querySelector('.animation-screen').style.display = 'none'
             document.querySelector('.animation-screen').style.opacity = '1'
+            document.querySelector('.main-content').style.opacity = '1'
         }
 
         showBackgroundAnimation()
@@ -228,15 +229,16 @@ export default function HomePage() {
             {/* Hero Section */}
             <div className="animation-screen" style={{
                 backgroundColor: "black",
-                // display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100vh",
                 width: "100vw",
-                textAlign: "center",
-                position: "relative",
-                display: 'none'
+                top: 0,
+                left: 0,
+                position: "fixed", /* Changed from 'relative' to 'fixed' */
+                display: 'none', /* The display property is also set to 'none' by default, which needs to be handled by JavaScript */
+                zIndex: 9999
             }}>
                 {/* ACM Text Animation */}
                 <div className="acm-text-container" style={{textAlign: 'left'}}>
