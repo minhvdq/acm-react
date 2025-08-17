@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState  } from 'react';
+import { useEffect, useRef } from 'react';
 import anime from 'animejs/lib/anime.es.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../Items/NavBar'
-import { motion } from "framer-motion";
 import FooterPage from '../Items/Footer';
 import './style.css';
 import homeUrl from '../../utils/config';
