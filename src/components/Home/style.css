@@ -323,3 +323,44 @@ div {
     align-items: center;
   }
 }
+
+/* === Transparent background fixes === */
+html, body, #root {
+  background: transparent !important;
+}
+
+.main-content,
+.main-content section,
+.main-content .container,
+.main-content .row,
+.main-content [class*="col-"],
+.main-content .card,
+.main-content .shadow,
+.main-content .shadow-sm {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar,
+.navbar .container,
+.navbar .navbar-collapse {
+  background: transparent !important;
+}
+
+/* Glass effect panel for readability */
+#about {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+/* Footer glass */
+.footer-container {
+  background: rgba(36,36,36,0.55) !important;
+  backdrop-filter: blur(3px);
+}
+
+/* Remove hard dark bg */
+.aaa {
+  background: transparent !important;
+}
