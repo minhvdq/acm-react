@@ -1,7 +1,7 @@
 [
     {
         "projectName": "Rate My Classes Gettysburg College",
-        "description": "We built a web app that sends personalized, summarized news emails. Users choose topics and frequency, data is stored in MongoDB, articles come from NewsAPI, summaries via Gemini, and emails are sent with SendGrid. Built with Next.js and Node.js.",
+        "description": "A web application that allows Gettysburg College students to rate and review their classes, helping peers make informed decisions about course selections.",
         "collaborators": [
             "Damian Vu"
         ],
