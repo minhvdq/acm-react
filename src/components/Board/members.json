@@ -1,87 +1,67 @@
 {
     "coreTeam": [
         {
-            "name": "Yashaswe Amatya",
-            "class": "2026",
-            "description": "Hi! I'm Yashaswe Amatya, a junior majoring in Computer Science and MathEcon. I am the President for ACM this year. Really looking forward to meeting everyone and working with all the officers and students on the campus.",
-            "role": "President",
-            "photo": "/photos/yashaswe.jpg",
-            "email": "amatyayasu@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/yashaswe-amatya/",
-            "github": "https://github.com/Yashaswe"
-        },
-        {
-            "name": "Lorenzo Zullo",
-            "class": "2026",
-            "description": "Hi I'm Lorenzo and I am a junior CS and Business major. I am excited to help out the club this year. Really happy to be part of a great group of like minded people who enjoy learning new things.",
-            "role": "Vice President",
-            "photo": "/photos/lorenzo.jpg",
-            "email": "llzulloll@gmail.com",
-            "linkedin": "https://www.linkedIn/in/llzulloll",
-            "github": null
-        },
-        {
-            "name": "Aldiyar Alen",
-            "class": "2028",
-            "description": "Hi, I'm Aldiyar, a freshman majoring in CS and Math, and I am the treasurer for the ACM club. I am really interested in working closely with the budget and providing funding for our events!",
-            "role": "Treasurer",
-            "photo": "/photos/aldiyar.png",
-            "email": "alenal01@gettysburg.edu",
-            "linkedin": "https://www.linkedin.com/in/aldiyaralen",
-            "github": "https://www.github.com/aldusialn"
-        },
-        {
-            "name": "Ulugbek Khairulla",
-            "class": "2027",
-            "description": "Hey, I’m Ulugbek and I am a sophomore majoring in CS and BOM with a Data Science. I am very glad to be a part of this great team and hope to contribute a lot to the ACM club.",
-            "role": "Outreach Officer",
-            "photo": "/photos/ulugbek.jpg",
-            "email": "khaiul01@gettysburg.edu",
-            "linkedin": "https://www.linkedin.com/in/ulugbekkh/",
-            "github": "https://github.com/Ulug2"
-        },
-        {
-            "name": "Nick Pinto",
-            "class": "2027",
-            "description": "I’m Nick, a sophomore majoring in CS & Mathematics. I am super excited to help out the club, and work alongside a great group of like-minded people.",
-            "role": "Secretary",
-            "photo": "/photos/nick_pinto.jpg",
-            "email": "scout.pinto@gmail.com",
-            "linkedin":"www.linkedin.com/in/nicholas-pinto-153624277",
-            "github": "https://github.com/sudo-nickPinto"
-        },
-        {
-            "name": "Abiral Shrestha",
-            "class": "2028",
-            "description": "Hi, I'm Abiral Shrestha, a freshman majoring in Computer Science. I'm excited to manage the design for the year and look forward to collaborating with everyone.",
-            "role": "Design Head",
-            "photo": "/photos/abiral.png",
-            "email": "shreab01@gettysburg.edu",
-            "linkedin":"https://www.linkedin.com/in/abiral-shrestha-94300927b/",
-            "github": "https://github.com/Abiralstha99"
-        },
-        {
             "name": "Damian Vu",
             "class": "2027",
             "description": "I am Damian, I do double major in Computer Science and Math. I am interested in using technology to solve practical problems and look forward to contributing as part of the club.",
-            "role": "Webmaster Lead",
+            "role": "President",
             "photo": "/photos/damian.png",
             "email": "vudimi01@gettysburg.edu",
             "linkedin": "https://www.linkedin.com/in/minh-vu-a0617225a/",
             "github": "https://github.com/minhvdq"
-        }
-    ],
-    "webmasterTeam": [
+        },
         {
             "name": "Aryama Sharma",
             "class": "2027",
             "description": "I am a Computer and Mathematics Double major with a potential minor in Data Science. I love learning new things and incorporating it to the best of my abilities. I look forward to growing together as a team.",
-            "role": "Webmaster",
+            "role": "Vice President",
             "photo": "/photos/aryama.jpeg",
             "email": "Sharar01@gettysburg.edu",
             "linkedin": "https://www.linkedin.com/in/aryama-sharma/",
             "github": "https://github.com/aryamasharma"
         },
+        {
+            "name": "Andy Nguyen",
+            "class": "2028",
+            "description": "I am a freshman at Gettysburg College pursuing a Computer Science major. I am interested in deep learning (machine learning) and programming competitions (CodeForces, Leetcode, AtCoder). In my free time I also enjoy playing the guitar and drawing digitally. I post them on YouTube, TikTok, and Instagram channel: @cryofmedusa06",
+            "role": "Secretary",
+            "photo": "/photos/andynguyen.png",
+            "email": "nguyan06@gettysburg.edu",
+            "linkedin": "https://www.linkedin.com/in/anh-duc-nguyen-2b863929a/",
+            "github": "https://github.com/anhducnguyen2006"
+        },
+        {
+            "name": "Jack Smoot",
+            "class": "2027",
+            "description": "",
+            "role": "Secretary",
+            "photo": "",
+            "email": "smooja01@gettysburg.edu",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Anaya Koirala",
+            "class": "2028",
+            "description": "",
+            "role": "Outreach",
+            "photo": "",
+            "email": "koiran01@gettysburg.edu",
+            "linkedin": "",
+            "github": ""
+        },
+        {
+            "name": "Aldiyar Alen",
+            "class": "2028",
+            "description": "Hi, I'm Aldiyar, a freshman majoring in CS and Math, and I am the treasurer for the ACM club. I am really interested in working closely with the budget and providing funding for our events!",
+            "role": "Webmaster Lead",
+            "photo": "/photos/aldiyar.png",
+            "email": "alenal01@gettysburg.edu",
+            "linkedin": "https://www.linkedin.com/in/aldiyaralen",
+            "github": "https://www.github.com/aldusialn"
+        }
+    ],
+    "webmasterTeam": [
         {
             "name": "Toai Nguyen",
             "class": "2028",
@@ -91,16 +71,6 @@
             "email": "nguyto01@gettysburg.edu",
             "linkedin": "https://www.linkedin.com/in/toai-nguyen-quoc-cong-065233335/",
             "github": "https://github.com/SaberNoUwU"
-        },
-        {
-            "name": "Andy Nguyen",
-            "class": "2028",
-            "description": "I am a freshman at Gettysburg College pursuing a Computer Science major. I am interested in deep learning (machine learning) and programming competitions (CodeForces, Leetcode, AtCoder). In my free time I also enjoy playing the guitar and drawing digitally. I post them on YouTube, TikTok, and Instagram channel: @cryofmedusa06",
-            "role": "Webmaster",
-            "photo": "/photos/andynguyen.png",
-            "email": "nguyan06@gettysburg.edu",
-            "linkedin": "https://www.linkedin.com/in/anh-duc-nguyen-2b863929a/",
-            "github": "https://github.com/anhducnguyen2006"
         },
         {
             "name": "Tejaswi Amatya",
@@ -115,6 +85,26 @@
     ],
     "exCoreTeam":[
         {
+            "name": "Yashaswe Amatya",
+            "class": "2026",
+            "description": "Hi! I'm Yashaswe Amatya, a junior majoring in Computer Science and MathEcon. I am the President for ACM this year. Really looking forward to meeting everyone and working with all the officers and students on the campus.",
+            "role": "President",
+            "photo": "/photos/yashaswe.jpg",
+            "email": "amatyayasu@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/yashaswe-amatya/",
+            "github": "https://github.com/Yashaswe"
+        },
+        {
+            "name": "Abiral Shrestha",
+            "class": "2028",
+            "description": "Hi, I'm Abiral Shrestha, a freshman majoring in Computer Science. I'm excited to manage the design for the year and look forward to collaborating with everyone.",
+            "role": "Design Head",
+            "photo": "/photos/abiral.png",
+            "email": "shreab01@gettysburg.edu",
+            "linkedin":"https://www.linkedin.com/in/abiral-shrestha-94300927b/",
+            "github": "https://github.com/Abiralstha99"
+        },
+        {
             "name": "Andry Rakotonjanbelo",
             "class": "2025",
             "description": "Hi, I'm a junior CS major who enjoys learning and exploring the domain of technology and its positive impact on the world. I am glad to serve as your club co-president this year. I look forward to meeting you all and helping keep the club welcoming and enjoyable for everybody.",
@@ -123,6 +113,16 @@
             "email": "rakoan02@gettysburg.edu",
             "linkedin": "https://www.linkedin.com/in/andryart10/",
             "github": "https://github.com/Andry-Arthur"
+        },
+        {
+            "name": "Lorenzo Zullo",
+            "class": "2026",
+            "description": "Hi I'm Lorenzo and I am a junior CS and Business major. I am excited to help out the club this year. Really happy to be part of a great group of like minded people who enjoy learning new things.",
+            "role": "Vice President",
+            "photo": "/photos/lorenzo.jpg",
+            "email": "llzulloll@gmail.com",
+            "linkedin": "https://www.linkedIn/in/llzulloll",
+            "github": null
         },
         {
             "name": "Kevin Estrada",
